@@ -2,12 +2,14 @@ h1{
     color: #000000;
 }
 body {
+    display: flex;
+    flex-direction: column;
     background: rgb(230,244,241);
 background: radial-gradient(circle, rgb(176, 179, 178) 
 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
 }
 section.skillsList{
-    color: whitesmoke;
+    color: rgb(22, 22, 22);
     font-size: medium;
 }
 section.aboutMe{
@@ -15,5 +17,10 @@ section.aboutMe{
     text-align: center;
 }
 section.contactInfo{
+
     color: #171515;
+}
+section.image{
+    border: 6px;
+    border-style:dashed;
 }
