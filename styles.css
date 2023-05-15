@@ -1,26 +1,50 @@
-h1{
+h1 {
     color: #000000;
 }
+
 body {
     display: flex;
     flex-direction: column;
-    background: rgb(230,244,241);
-background: radial-gradient(circle, rgb(176, 179, 178) 
-2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+    background: rgb(220, 220, 220);
+
 }
-section.skillsList{
-    color: rgb(22, 22, 22);
+
+section.skillsList {
+    padding: 2%;
+    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+    color: rgb(0, 0, 0);
     font-size: medium;
+    margin-right: auto;
 }
-section.aboutMe{
-    color: #000000;
+
+section.aboutMe {
+    padding: 1%;
+    margin: auto;
+    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+    color: #060606;
     text-align: center;
 }
-section.contactInfo{
 
+section.contactInfo {
+    padding: 1%;
+    margin-right: auto;
+    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
     color: #171515;
 }
-section.image{
-    border: 6px;
-    border-style:dashed;
+
+section.siteProfile {
+    padding: 1%;
+    margin-right: auto;
+    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+}
+
+section.image {
+    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+    margin-right: auto;
+
+}
+
+footer {
+    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+    
 }
