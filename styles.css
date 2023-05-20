@@ -1,50 +1,114 @@
+.header {
+background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+}
 h1 {
     color: #000000;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
 }
-
+header nav{
+    height: 60px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    
+}
+nav li{
+    margin: 50px;
+}
 body {
+    /*background-image:url(images/bonzai.jpeg);*/
     display: flex;
     flex-direction: column;
-    background: rgb(220, 220, 220);
-
+}
+.contactInfo h4{
+    text-align:left ;
+}
+h2{
+    text-align: center;
+    height: 20px;
+}
+.skillsList h4{
+    text-align: center;
 }
 
 section.skillsList {
-    padding: 2%;
-    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
     color: rgb(0, 0, 0);
-    font-size: medium;
-    margin-right: auto;
+    width: 40%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,2fr));
+    gap: 1rem;
+}
+.skillsList img{
+    max-width: 100%;
+    border: 2px solid;
 }
 
 section.aboutMe {
     padding: 1%;
     margin: auto;
-    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
     color: #060606;
     text-align: center;
+
 }
 
 section.contactInfo {
     padding: 1%;
-    margin-right: auto;
-    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
-    color: #171515;
+    margin: center;
 }
+.siteProfile h4{
 
-section.siteProfile {
+padding: 1%;
+}
+.siteProfile {
     padding: 1%;
     margin-right: auto;
-    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
 }
-
-section.image {
-    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+.siteProfile img{
+max-width: 50%;
+margin: center;
+}
+section.image img{
     margin-right: auto;
+    max-width: 20%;
+    border-radius: 90%;
+    
 
 }
 
 footer {
     background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
-    
+
+}
+h5{
+    text-align: center;
+}
+section.websites{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.top-button{
+    background-color: rgba(255, 255, 255, 0.279);
+    width: 10%;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    border-radius: 10px;
+    transition:0.5s;
+    position:fixed;
+    bottom: 0px;
+    left:88%;
+    color: #0000008c;
+
+}
+button:hover{
+    background-color: black;
+    color: white;
 }

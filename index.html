@@ -2,66 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roman Gonzalez</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Gonzalez</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-        <h1>Professional Portfolio</h1>
-    <section class="aboutMe">
-        <h2>About Me</h2>
-        <p>
-            Mexican American Born and raised in New Jersey. Likes to draw and paint
-            in his spare time.
-        </p>
+  <header>
+    <section class="header">
+    <h1 class="top">Welcome</h1>
+    <nav>
+      <ul>
+        <li><a href=#aboutMe>About me</a></li>
+        <li><a href=#contactInfo>Contact Info</a></li>
+        <li><a href=#siteProfile>Sites</a></li>
+        <li><a href=#skillsList>Skills</a></li>
+        <li><a href=#projects>Projects</a></li>
+      </ul>
+    </nav>
+  </section>
+    <section id="aboutMe" class="aboutMe">
+      <h2>About Me</h2>
+      <p>
+        Mexican American Born and raised in New Jersey. Likes to draw and paint
+        in his spare time.
+      </p>
     </section>
-    <section class="image">
-        <img src="Roman.jpg" alt="roman and luna" width="200" height="300" />
+    <section id="image" class="image">
+      <img src="images/Roman.jpg" alt="roman and luna" />
     </section>
-    
-    <section class="contactInfo">
-        <h4>Contact Info</h4>
-        <p>Email: Romansolano12@yahoo.com</p>
+  </header>
+  <main>
+    <section id="contactInfo" class="contactInfo">
+      <h4>Contact Info</h4>
+      <p>Email: Romansolano12@yahoo.com</p>
     </section>
-    
-    <section class="siteProfile">
-        <h4>Site Profile</h4>
-        <nav>
-        <a href="https://github.com/romansolano12">Github</a><br />
-        <a href="https://www.linkedin.com/in/roman-gonzalez-a298b8276/">LinkedIn</a>
-        </nav>
-    </section>
-    
-    <section class="skillsList">
-        <h4>Skills List</h4>
-        <ul>
-            <li><strong>Problem Solver</strong></li>
-            <li><strong>MultiTask</strong></li>
-            <li>
-                <strong>Bilingual</strong>
-                <ul>
-                    <li>English</li>
-                    <li>Spanish</li>
-                </ul>
-            </li>
 
-            <li><strong>Adaptable</strong></li>
-            <li><strong>Creative</strong></li>
-        </ul>
+    <section id="siteProfile" class="siteProfile">
+      <h2>Site Profile</h2>
+      <nav>
+        <div>
+        <h4>GitHub</h4>
+        <a href="https://github.com/romansolano12"><img src="/images/screenshot-github.png" alt="GitHub Page"></a><br />
+        </div>
+        <div>
+        <h4>LinkedIn</h4>
+        <a href="https://www.linkedin.com/in/roman-gonzalez-a298b8276/"><img src="/images/screenshot-linkedIn.png" alt="LinkedIn page"></a>
+        </div>
+      </nav>
     </section>
-    <h2>Projects</h2>
-    <p>Java - FortuneTeller</p>
-    <p>html - </p>
-    <footer>
-        <p>Websites used as reference material.</p>
-        <nav>
-        <p><a href="https://www.w3schools.com/">w3schools.com</a></p>
-        <p><a href="https://coolors.co/">coolors.co</a></p>
-        </nav>
-    </footer>
+    <h2>Skills List</h2>
+    <section id="skillsList" class="skillsList">
+      <div>
+        <h4>Problem Solver</h4>
+        <img src="/images/problem_solve.jpeg" alt="dog thinking">
+      </div>
+      <div>
+        <h4>MultiTask</h4>
+        <img src="/images/Multitask.jpeg" alt="dog juggling">
+      </div>
+      <div>
+        <h4>Bilingual: English/Spanish</h4>
+        <img src="/images/Bilingual.jpeg" alt="dog barking">
+      </div>
+      <div>
+        <h4>Adaptable</h4>
+        <img src="/images/Adaptive.jpeg" alt="dog in different shapes">
+      </div>
+      <div>
+        <h4>Creative</h4>
+        <img src="/images/Creative.jpeg" alt="dog drawing">
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, reiciendis delectus. Saepe, quisquam,
+        dolor
+        quam aperiam a, assumenda harum minus ut accusamus fugit voluptatem corrupti quo id itaque quaerat accusantium.
+      </p>
+      <p>
+        <a href="https://github.com/romansolano12/Java-Projects">Java - FortuneTeller</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+
+    <h5>Websites used as reference material.</h5>
+    <section class="websites">
+      <p><a href="https://www.w3schools.com/">w3schools.com</a></p>
+      <p><a href="https://coolors.co/">coolors.co</a></p>
+    </section>
+    <div>
+      <small>&copy;Copyright 2023</small>
+    </div>
+    <a href="#top"><button class="top-button">Back to top</button></a>
+  </footer>
 </body>
 
 </html>
