@@ -1,8 +1,11 @@
 .header {
-background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
+background-image:url(images/bonzai.jpeg);
+background-size: 100%;
+background-position: 50%;
+background-repeat: no-repeat;
 }
 h1 {
-    color: #000000;
+    color: rgb(255, 255, 255);
     font-family:'Times New Roman', Times, serif;
     font-size: 50px;
 }
@@ -12,17 +15,18 @@ header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 nav ul{
     display: flex;
     list-style: none;
-    
 }
 nav li{
+    background-color: white;
     margin: 50px;
+    padding: 10px;
 }
 body {
-    /*background-image:url(images/bonzai.jpeg);*/
     display: flex;
     flex-direction: column;
 }
@@ -39,7 +43,7 @@ h2{
 
 section.skillsList {
     color: rgb(0, 0, 0);
-    width: 40%;
+    width: 100%;
     margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px,2fr));
