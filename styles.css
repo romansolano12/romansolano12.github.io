@@ -1,43 +1,62 @@
-.header {
-background-image:url(images/bonzai.jpeg);
-background-size: 100%;
-background-position: 50%;
-background-repeat: no-repeat;
+body {
+    background-color: black;
+    padding-inline: 7%;
 }
+
+.header {
+    background-color: white;
+}
+
+main {
+    background-color: white;
+}
+
 h1 {
-    color: rgb(255, 255, 255);
-    font-family:'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
 }
-header nav{
+
+.aboutMe {
+    background-color: white;
+}
+
+header nav {
     height: 60px;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
-nav ul{
+
+nav ul {
     display: flex;
     list-style: none;
 }
-nav li{
-    background-color: white;
+
+nav li {
     margin: 50px;
     padding: 10px;
 }
-body {
-    display: flex;
-    flex-direction: column;
+
+.image {
+    background-image: url(images/bonzai.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20px;
 }
-.contactInfo h4{
-    text-align:left ;
+
+.contactInfo h4 {
+    text-align: left;
 }
-h2{
+
+h2 {
     text-align: center;
     height: 20px;
 }
-.skillsList h4{
+
+.skillsList h4 {
     text-align: center;
 }
 
@@ -46,12 +65,13 @@ section.skillsList {
     width: 100%;
     margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,2fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
     gap: 1rem;
 }
-.skillsList img{
+
+.skillsList img {
     max-width: 100%;
-    border: 2px solid;
+    border: 2px;
 }
 
 section.aboutMe {
@@ -66,53 +86,60 @@ section.contactInfo {
     padding: 1%;
     margin: center;
 }
-.siteProfile h4{
 
-padding: 1%;
-}
-.siteProfile {
+.siteProfile h4 {
+
     padding: 1%;
-    margin-right: auto;
 }
-.siteProfile img{
-max-width: 50%;
-margin: center;
+
+.siteProfile {
+    background-color: #393939;
+    color: white;
+    padding: 5%;
+    margin: 20px, auto;
 }
-section.image img{
+
+.siteProfile img {
+    max-width: 50%;
+    border: 4px;
+}
+
+section.image img {
     margin-right: auto;
     max-width: 20%;
     border-radius: 90%;
-    
-
 }
 
 footer {
-    background: radial-gradient(circle, rgb(176, 179, 178) 2%, rgb(153, 153, 153) 17%, rgb(107, 106, 106) 55%, rgb(97, 97, 97) 95%);
-
+    background-color: white;
 }
-h5{
+
+h5 {
     text-align: center;
 }
-section.websites{
+
+section.websites {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.top-button{
+
+.top-button {
     background-color: rgba(255, 255, 255, 0.279);
     width: 10%;
     padding: 10px 20px;
     letter-spacing: 1px;
     text-transform: capitalize;
     border-radius: 10px;
-    transition:0.5s;
-    position:fixed;
+    transition: 0.5s;
+    position: fixed;
     bottom: 0px;
-    left:88%;
+    left: 88%;
     color: #0000008c;
 
 }
-button:hover{
+
+button:hover {
     background-color: black;
     color: white;
 }
