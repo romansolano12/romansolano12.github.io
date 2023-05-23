@@ -87,15 +87,10 @@ section.contactInfo {
     margin: center;
 }
 
-.siteProfile h4 {
-
-    padding: 1%;
-}
-
 .siteProfile {
     background-color: #393939;
     color: white;
-    padding: 5%;
+    padding: 3%;
     margin: 20px, auto;
 }
 
@@ -125,7 +120,7 @@ section.websites {
 }
 
 .top-button {
-    background-color: rgba(255, 255, 255, 0.279);
+    background-color: rgba(255, 255, 255, 0.378);
     width: 10%;
     padding: 10px 20px;
     letter-spacing: 1px;
@@ -134,7 +129,7 @@ section.websites {
     transition: 0.5s;
     position: fixed;
     bottom: 0px;
-    left: 88%;
+    left: 82%;
     color: #0000008c;
 
 }
