@@ -39,8 +39,8 @@ h1 {
     flex-basis: 35%;
 }
 .aboutCol1 img{
-    width: 100%;
-    border-radius: 15px;
+    max-width: 60%;
+    border-radius: 100px;
 
 }
 .aboutCol2{
