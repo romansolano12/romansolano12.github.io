@@ -44,7 +44,7 @@ h1 {
 
 }
 .aboutCol2{
-    flex-basis: 35%;
+    flex-basis: 50%;
 }
 .subTitle{
     font-size: 60px;
@@ -53,6 +53,11 @@ h1 {
 }
 .aboutCol2 p{
 background: #8987877a;
+display: flex;
+margin-left: 170px;
+padding: 20px;
+border-radius: 15%;
+
 
 }
 nav ul li {
@@ -147,9 +152,15 @@ section.image img {
     padding-top: 20px;
     border-color: white;
 }
-
+section.projects p {
+    background: rgba(255, 255, 255, 0.341);
+    text-align: center;
+    font-size: 40px;
+    padding: 50px;
+    margin:30px;
+}
 footer {
-    background-color: white;
+    background-color: rgba(128, 128, 128, 0.463);
 }
 
 h5 {
