@@ -31,17 +31,16 @@ body {
     flex-basis: 35%;
 }
 .aboutCol1 img{
-    max-width: 60%;
-    border-radius: 100px;
+    width: 100%;
+    border-radius: 15px;
 
 }
 .aboutCol2{
-    flex-basis: 50%;
+    flex-basis: 60%;
 }
 .subTitle{
     font-size: 60px;
-    font-weight: 500;
-    padding-bottom: 100px;
+    font-weight: 600;
 }
 .aboutCol2 p{
 background: #8987877a;
@@ -49,8 +48,44 @@ display: flex;
 margin-left: 170px;
 padding: 20px;
 border-radius: 15%;
-
-
+}
+.tabTitles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tabLinks{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tabLinks::after{
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background: whitesmoke;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tabLinks.activeLink::after{
+width: 50%;
+}
+.tabContents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tabContents ul li span{
+    font-size: 14px;
+    color: whitesmoke;
+}
+.tabContents{
+    display: none;
+}
+.tabContents.activeTab{
+display: block;
 }
 nav ul li {
     list-style: none;

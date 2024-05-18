@@ -26,6 +26,32 @@
     </div>
   </section>
   </header>
+  <div class="tabTitles">
+    <p class="tabLinks activeLink" onclick="opentab('software')">Software Development</p>
+    <p class="tabLinks"onclick="opentab('dataAnalyst')">Data Analyst</p>
+    <p class="tabLinks"onclick="opentab('cybersecurity')">Cybersecurity</p>
+  </div>
+  <div class="tabContents activeTab" id="software">
+    <ul>
+      <li><span>Skills</span><br>Java, Javascript, HTML, CSS, Spring, React, Node</li>
+      <li><span>Software</span><br>GitHub, VS Code, IntelliJ </li>
+      <li><span>Education</span><br>We Can Code IT, Certificate of Fullstack Java Software Development— 2023</li>
+    </ul>
+  </div>
+  <div class="tabContents" id="dataAnalyst">
+    <ul>
+      <li><span>Skills</span><br>SQL, Spreadsheets, RStudio, Data Management</li>
+      <li><span>Software</span><br>Microsoft 365 Suite, Google Workspace, Slack, Zoom, Kaggle, Loom</li>
+      <li><span>Education</span><br>Merit America, Google Data Analytics certification- 2024</li>
+    </ul>
+  </div>
+  <div class="tabContents" id="cybersecurity">
+    <ul>
+      <li><span>Skills</span><br>Vulnerabilities and threats, Risk management and mitigation, Network Security, Access control</li>
+      <li><span>Software</span><br>WireShark, Codio, PowerShell, Linux, Windows, MacOS   </li>
+      <li><span>Education</span><br>Correlation One, Information Security Analyst- 2024 </li>
+    </ul>
+  </div>
   <main>
     <section id="contactInfo" class="contactInfo">
       <h4>Contact Info</h4>
@@ -54,28 +80,6 @@
     </section>
     <h2>Skills List</h2>
     <section id="skillsList" class="skillsList">
-      <!---- 
-      <div>
-        <h4>Problem Solver</h4>
-        <img src="/images/problem_solve.jpeg" alt="dog thinking">
-      </div>
-      <div>
-        <h4>MultiTask</h4>
-        <img src="/images/Multitask.jpeg" alt="dog juggling">
-      </div>
-      <div>
-        <h4>Bilingual: English/Spanish</h4>
-        <img src="/images/Bilingual.jpeg" alt="dog barking">
-      </div>
-      <div>
-        <h4>Adaptable</h4>
-        <img src="/images/Adaptive.jpeg" alt="dog in different shapes">
-      </div>
-      <div>
-        <h4>Creative</h4>
-        <img src="/images/Creative.jpeg" alt="dog drawing">
-      </div>
-      -->
     </section>
     <section id="projects" class="projects">
       <h2>Projects</h2>
@@ -97,6 +101,25 @@
     </div>
     <a href="#top"><button class="top-button">Back to top</button></a>
   </footer>
+
+
+  <script>
+    var tabLinks = document.getElementsByClassName("tabLinks");
+    var tabContents = document.getElementsByClassName("tabContents")
+
+    function opentab(tabName){
+      for(tabLink of tabLinks){
+        tabLink.classList.remove("activeLink");
+      }
+      for(tabContent of tabContents){
+        tabContent.classList.remove("activeTab");
+      }
+      event.currentTarget.classList.add("activeLink");
+      document.getElementById(tabName).classList.add("activeTab");
+    }
+  </script>
+
+
 </body>
 
 </html>
