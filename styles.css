@@ -1,12 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'poppins',sans-serif;
+    font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
+
 body {
     background-color: black;
-    color:white;
+    color: white;
 }
 
 .header {
@@ -17,50 +18,60 @@ body {
     background-position: center;
 
 }
+
 #aboutMe {
     padding: 80px 0;
     color: rgb(255, 255, 255);
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 
 }
-.aboutCol1{
+
+.aboutCol1 {
     flex-basis: 35%;
 }
-.aboutCol1 img{
+
+.aboutCol1 img {
     width: 100%;
     border-radius: 15px;
 
 }
-.aboutCol2{
+
+.aboutCol2 {
     flex-basis: 60%;
 }
-.subTitle{
+
+.subTitle {
     font-size: 60px;
     font-weight: 600;
 }
-.aboutCol2 p{
-background: #8987877a;
-display: flex;
-margin-left: 170px;
-padding: 20px;
-border-radius: 15%;
+
+.aboutCol2 p {
+    background: #8987877a;
+    display: flex;
+    margin-left: 170px;
+    padding: 20px;
+    border-radius: 15%;
 }
-.tabTitles{
+
+.tabTitles {
     display: flex;
     margin: 20px 0 40px;
 }
-.tabLinks{
+
+.tabLinks {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
 }
-.tabLinks::after{
+
+.tabLinks::after {
     content: ' ';
     width: 0;
     height: 3px;
@@ -70,56 +81,65 @@ border-radius: 15%;
     bottom: -8px;
     transition: 0.5s;
 }
-.tabLinks.activeLink::after{
-width: 50%;
+
+.tabLinks.activeLink::after {
+    width: 50%;
 }
-.tabContents ul li{
+
+.tabContents ul li {
     list-style: none;
     margin: 10px 0;
 }
-.tabContents ul li span{
+
+.tabContents ul li span {
     font-size: 14px;
     color: whitesmoke;
 }
-.tabContents{
+
+.tabContents {
     display: none;
 }
-.tabContents.activeTab{
-display: block;
+
+.tabContents.activeTab {
+    display: block;
 }
+
 nav ul li {
     list-style: none;
     display: inline-block;
     margin: 10px 20px;
     padding: 10px 10px;
 }
-nav ul li a{
-color: white;
-text-decoration: none;
-font-size: 18px;
-position: relative;
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
 }
 
-nav ul li a::after{
+nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
     background: whitesmoke;
     position: absolute;
-    left:0;
+    left: 0;
     bottom: -6px;
     transition: 0.3s;
 }
-nav ul li a:hover::after{
+
+nav ul li a:hover::after {
     width: 100%;
 
 }
 
-.headerText{
+.headerText {
     margin-top: 20%;
     font-size: 30px;
 }
-.headerText h1{
+
+.headerText h1 {
     font-size: 60px;
     margin-top: 20px;
 }
@@ -178,8 +198,9 @@ section.projects p {
     text-align: center;
     font-size: 40px;
     padding: 50px;
-    margin:30px;
+    margin: 30px;
 }
+
 footer {
     background-color: rgba(128, 128, 128, 0.463);
 }

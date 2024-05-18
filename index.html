@@ -20,16 +20,17 @@
           <li><a href=#projects>Projects</a></li>
         </ul>
       </nav>
-    <div class="headerText">
-      <p>Software Developer | Data Analyst | Cybersecurity</p>
-      <h1>Hello,<br> My name is Roman</h1>
-    </div>
-  </section>
+      <div class="headerText">
+        <p>Software Developer | Data Analyst | Cybersecurity</p>
+        <h1>Hello,<br> My name is Roman</h1>
+      </div>
+    </section>
   </header>
+
   <div class="tabTitles">
     <p class="tabLinks activeLink" onclick="opentab('software')">Software Development</p>
-    <p class="tabLinks"onclick="opentab('dataAnalyst')">Data Analyst</p>
-    <p class="tabLinks"onclick="opentab('cybersecurity')">Cybersecurity</p>
+    <p class="tabLinks" onclick="opentab('dataAnalyst')">Data Analyst</p>
+    <p class="tabLinks" onclick="opentab('cybersecurity')">Cybersecurity</p>
   </div>
   <div class="tabContents activeTab" id="software">
     <ul>
@@ -47,8 +48,9 @@
   </div>
   <div class="tabContents" id="cybersecurity">
     <ul>
-      <li><span>Skills</span><br>Vulnerabilities and threats, Risk management and mitigation, Network Security, Access control</li>
-      <li><span>Software</span><br>WireShark, Codio, PowerShell, Linux, Windows, MacOS   </li>
+      <li><span>Skills</span><br>Vulnerabilities and threats, Risk management and mitigation, Network Security, Access
+        control</li>
+      <li><span>Software</span><br>WireShark, Codio, PowerShell, Linux, Windows, MacOS </li>
       <li><span>Education</span><br>Correlation One, Information Security Analyst- 2024 </li>
     </ul>
   </div>
@@ -101,25 +103,7 @@
     </div>
     <a href="#top"><button class="top-button">Back to top</button></a>
   </footer>
-
-
-  <script>
-    var tabLinks = document.getElementsByClassName("tabLinks");
-    var tabContents = document.getElementsByClassName("tabContents")
-
-    function opentab(tabName){
-      for(tabLink of tabLinks){
-        tabLink.classList.remove("activeLink");
-      }
-      for(tabContent of tabContents){
-        tabContent.classList.remove("activeTab");
-      }
-      event.currentTarget.classList.add("activeLink");
-      document.getElementById(tabName).classList.add("activeTab");
-    }
-  </script>
-
-
+  <script src="myScript.js"></script>
 </body>
 
 </html>
