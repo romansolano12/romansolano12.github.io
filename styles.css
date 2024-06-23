@@ -184,23 +184,31 @@ section.contactInfo {
     margin: center;
 }
 
-.siteProfile {
+section.siteProfile {
     color: white;
     padding: 3%;
-    margin: 20px, auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-
-
-
-section.projects p {
+section.projects p{
     background: rgba(255, 255, 255, 0.341);
     text-align: center;
     font-size: 40px;
     padding: 50px;
     margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
 }
-
+.projects a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 footer {
     background-color: rgba(128, 128, 128, 0.463);
 }
@@ -211,8 +219,14 @@ h5 {
 
 section.websites {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+img{
+   border-radius: 30px ;
+   width: 80%;
 }
 
 .top-button {
