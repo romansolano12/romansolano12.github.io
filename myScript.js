@@ -1,13 +1,19 @@
-var tabLinks = document.getElementsByClassName("tabLinks");
-var tabContents = document.getElementsByClassName("tabContents")
+// FIX: Changed 'var' to 'const' for modern JS
+const tabLinks = document.getElementsByClassName("tabLinks");
+const tabContents = document.getElementsByClassName("tabContents");
 
-function opentab(tabName) {
-    for (tabLink of tabLinks) {
+// FIX: Added 'clickedElement' as a second argument
+function opentab(tabName, clickedElement) {
+    
+    // FIX: Added 'const' to declare the loop variable
+    for (const tabLink of tabLinks) {
         tabLink.classList.remove("activeLink");
     }
-    for (tabContent of tabContents) {
+    for (const tabContent of tabContents) {
         tabContent.classList.remove("activeTab");
     }
-    event.currentTarget.classList.add("activeLink");
+
+    // FIX: Used 'clickedElement' instead of the undefined 'event.currentTarget'
+    clickedElement.classList.add("activeLink");
     document.getElementById(tabName).classList.add("activeTab");
 }

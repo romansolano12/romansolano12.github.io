@@ -53,9 +53,10 @@ body {
 .aboutCol2 p {
     background: #8987877a;
     display: flex;
-    margin-left: 170px;
+    /* FIX: Removed "margin-left: 170px;" which breaks mobile layout */
     padding: 20px;
-    border-radius: 15%;
+    border-radius: 15%; /* Note: 15% is a very high radius, 15px might be better */
+    margin-bottom: 15px; /* Added to space out the paragraphs */
 }
 
 .tabTitles {
@@ -63,12 +64,21 @@ body {
     margin: 20px 0 40px;
 }
 
+/* FIX: Added styles to reset the <button> element */
 .tabLinks {
+    /* Reset button defaults */
+    background: none;
+    border: none;
+    color: white; 
+    font-family: 'poppins', sans-serif;
+
+    /* Your original styles */
     margin-right: 50px;
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    padding: 0; /* Reset button padding */
 }
 
 .tabLinks::after {
@@ -150,50 +160,39 @@ nav ul li a:hover::after {
 
 h2 {
     text-align: center;
-    height: 20px;
+    /* FIX: Removed "height: 20px;" which was breaking the layout */
+    margin-bottom: 20px; /* Added for spacing */
 }
 
-.skillsList h4 {
-    text-align: center;
-}
-
-section.skillsList {
-    color: rgb(0, 0, 0);
-    width: 100%;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
-    gap: 1rem;
-}
-
-.skillsList img {
-    max-width: 100%;
-    border: 2px;
-}
-
-section.aboutMe {
-    padding: 1%;
-    margin: auto;
-    color: #060606;
-    text-align: center;
-
-}
+/* FIX: Removed dead code for ".skillsList" and "section.aboutMe"
+  as they were not used or were incorrect.
+*/
 
 section.contactInfo {
     padding: 1%;
-    margin: center;
+    /* FIX: "margin: center;" is invalid CSS. 
+       This centers the section and gives it a max width. 
+    */
+    max-width: 900px; /* Example width */
+    margin: 20px auto; /* 20px top/bottom, auto left/right */
+}
+
+/* FIX: Added list-style: none to the new <ul> */
+section.siteProfile ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; /* Added for mobile */
 }
 
 section.siteProfile {
     color: white;
     padding: 3%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
-section.projects p{
+section.projects p {
     background: rgba(255, 255, 255, 0.341);
     text-align: center;
     font-size: 40px;
@@ -201,16 +200,31 @@ section.projects p{
     margin: 30px;
     display: flex;
     flex-direction: column;
-    align-items:center ;
+    align-items: center;
     justify-content: center;
 }
-.projects a{
+
+.projects a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* FIX: Removed the global "img" rule.
+  Created this specific class for project images.
+*/
+.project-image {
+    border-radius: 30px;
+    width: 80%;
+    max-width: 600px; /* Added a max width */
+    display: block;
+    margin: 10px auto; /* Center the image */
+}
+
 footer {
     background-color: rgba(128, 128, 128, 0.463);
+    padding: 20px; /* Added some padding */
+    position: relative; /* Needed for positioning the top-button */
 }
 
 h5 {
@@ -222,29 +236,32 @@ section.websites {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
-}
-img{
-   border-radius: 30px ;
-   width: 80%;
 }
 
+/* FIX: This now styles the <a> tag.
+  FIX: Replaced "left: 82%" and "width: 10%" with
+       robust "right", "bottom", and a fixed 'rem' width.
+*/
 .top-button {
     background-color: rgba(255, 255, 255, 0.378);
-    width: 10%;
+    width: 8rem; /* Scalable width */
     padding: 10px 20px;
     letter-spacing: 1px;
     text-transform: capitalize;
     border-radius: 10px;
     transition: 0.5s;
-    position: fixed;
-    bottom: 0px;
-    left: 82%;
+    position: fixed; /* Fixed, not absolute */
+    bottom: 20px;   /* 20px from bottom */
+    right: 20px;    /* 20px from right */
     color: #0000008c;
-
+    text-decoration: none; /* Remove underline from link */
+    text-align: center; /* Center text */
 }
 
-button:hover {
+/* FIX: Changed "button:hover" to ".top-button:hover"
+  to only target this specific button/link.
+*/
+.top-button:hover {
     background-color: black;
     color: white;
 }

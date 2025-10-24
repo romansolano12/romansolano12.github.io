@@ -8,30 +8,29 @@
   <title>Roman Gonzalez</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<!-----------------Header-->
+
 <body>
-  <header>
-    <section class="header">
-      <nav>
-        <ul>
-          <li><a href=aboutMe.html>About Me</a></li>
-          <li><a href=#contactInfo>Contact Info</a></li>
-          <li><a href=#siteProfile>Sites</a></li>
-          <li><a href=#projects>Projects</a></li>
-        </ul>
-      </nav>
-      <div class="headerText">
-        <p>Software Developer | Data Analyst | Cybersecurity</p>
-        <h1>Hello,<br> My name is Roman</h1>
-      </div>
-    </section>
+  <header id="header">
+    <nav>
+      <ul>
+        <li><a href="aboutMe.html">About Me</a></li>
+        <li><a href="#contactInfo">Contact Info</a></li>
+        <li><a href="#siteProfile">Sites</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+    <div class="headerText">
+      <p>Software Developer | Data Analyst | Cybersecurity</p>
+      <h1>Hello,<br> My name is Roman</h1>
+    </div>
   </header>
-<!---------------About me-->
+
   <div class="tabTitles">
-    <p class="tabLinks activeLink" onclick="opentab('software')">Software Development</p>
-    <p class="tabLinks" onclick="opentab('dataAnalyst')">Data Analyst</p>
-    <p class="tabLinks" onclick="opentab('cybersecurity')">Cybersecurity</p>
+    <button class="tabLinks activeLink" onclick="opentab('software', this)">Software Development</button>
+    <button class="tabLinks" onclick="opentab('dataAnalyst', this)">Data Analyst</button>
+    <button class="tabLinks" onclick="opentab('cybersecurity', this)">Cybersecurity</button>
   </div>
+
   <div class="tabContents activeTab" id="software">
     <ul>
       <li><span>Skills</span><br>Java, Javascript, HTML, CSS, Spring, React, Node</li>
@@ -54,48 +53,46 @@
       <li><span>Education</span><br>Correlation One, Information Security Analyst- 2024 </li>
     </ul>
   </div>
-  <!-----------------------------Websites------------------------------------->
+
   <main>
     <section id="contactInfo" class="contactInfo">
-      <h4>Contact Info</h4>
+      <h2>Contact Info</h2>
       <p>Email: Romansolano12@yahoo.com</p>
       <p>Email: Roman.solano713@Gmail.com</p>
     </section>
+
     <section id="siteProfile" class="siteProfile">
-      <nav>
-        
       <h2>Site Profile</h2>
-      
-        <div>
-          <h4>GitHub</h4>
-          <a href="https://github.com/romansolano12"><img src="/images/GithubUpdate.png"
-              alt="GitHub Page"></a><br />
-        </div>
-        <div>
-          <h4>LinkedIn</h4>
-          <a href="https://www.linkedin.com/in/roman-gonzalez-a298b8276/"><img src="/images/LinkedInUpdate.png"
+      <ul>
+        <li>
+          <h3>GitHub</h3>
+          <a href="https://github.com/romansolano12"><img src="images/GithubUpdate.png" alt="GitHub Page"></a>
+        </li>
+        <li>
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/roman-gonzalez-a298b8276/"><img src="images/LinkedInUpdate.png"
               alt="LinkedIn page"></a>
-        </div>
-        <div>
-          <h4>Kaggle</h4>
-          <a href="https://www.kaggle.com/romangonzalez713"><img src="/images/screenshot-kaggle.png"
-              alt="Kaggle page"></a>
-        </div>
-      </nav>
+        </li>
+        <li>
+          <h3>Kaggle</h3>
+          <a href="https://www.kaggle.com/romangonzalez713"><img src="images/screenshot-kaggle.png" alt="Kaggle page"></a>
+        </li>
+      </ul>
     </section>
+
     <section id="projects" class="projects">
       <h2>Projects</h2>
       <p>1. SQL Project "Coming Soon"</p>
       <p>2. Capstone Project</p>
-      <a href="https://rpubs.com/RomanSolano12/CaseStudy2"><img src="images/CaseStudy.png" alt="Case Study"></a>
+      <a href="https://rpubs.com/RomanSolano12/CaseStudy2"><img class="project-image" src="images/CaseStudy.png" alt="Case Study"></a>
       <p>3. Excel Project "Coming Soon"</p>
       <p>4. Demo Video </p>
-      <a href="https://www.loom.com/share/736a4cb8813f45e2b4e7618ad9af0853"><img src="images/Loom.png" alt="Loom"></a>
+      <a href="https://www.loom.com/share/736a4cb8813f45e2b4e7618ad9af0853"><img class="project-image" src="images/Loom.png" alt="Loom"></a>
     </section>
   </main>
 
   <footer>
-    <h5>Websites used as reference material.</h5>
+    <h3>Websites used as reference material.</h3>
     <section class="websites">
       <p><a href="https://www.w3schools.com/">w3schools.com</a></p>
       <p><a href="https://coolors.co/">coolors.co</a></p>
@@ -103,8 +100,9 @@
     <div>
       <small>&copy;Copyright 2023</small>
     </div>
-    <a href="#top"><button class="top-button">Back to top</button></a>
+    <a href="#header" class="top-button">Back to top</a>
   </footer>
+
   <script src="myScript.js"></script>
 </body>
 
