@@ -1,15 +1,25 @@
+:root {
+    --bg-color: #0f1014; /* Deep dark blue-grey */
+    --card-bg: #1e1f24;
+    --accent-color: #00d2ff; /* A cyan pop for "Tech/Data" vibe */
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+}
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6; /* Better readability */
+    background-image: radial-gradient(circle at 50% 0%, #2a2d36 0%, var(--bg-color) 70%); /* Subtle spotlight effect */
 }
-
 /* .header {
     width: 100%;
     height: 100vh;
@@ -121,33 +131,44 @@ body {
 }
 
 nav ul li {
-    list-style: none;
     display: inline-block;
-    margin: 10px 20px;
-    padding: 10px 10px;
+    margin: 10px 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: var(--text-muted); /* Start muted */
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     position: relative;
+    transition: color 0.3s;
 }
 
 nav ul li a::after {
     content: '';
     width: 0;
-    height: 3px;
-    background: whitesmoke;
+    height: 2px;
+    background: var(--accent-color);
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -4px;
     transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color); /* Light up on hover */
 }
 
 nav ul li a:hover::after {
     width: 100%;
+}
 
+header#header {
+    width: 100%;
+    padding: 20px 5%; /* dynamic padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .headerText {
@@ -216,15 +237,12 @@ section.projects p {
     align-items: center;
 }
 
-/* FIX: Removed the global "img" rule.
-  Created this specific class for project images.
-*/
+
 .project-image {
-    border-radius: 10px;
-    width:90%;
-    max-width: 800px; /* Added a max width */
-    display: block;
-    margin: 10px auto; /* Center the image */
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
 }
 
 footer {
@@ -410,4 +428,99 @@ section.websites {
     .modal-content {
         width: 100%;
     }
+}
+
+/* Project Layout Improvements */
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgba(30, 31, 36, 0.7); /* Semi-transparent */
+    backdrop-filter: blur(10px); /* The "Frosted Glass" effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Keep your grid layout */
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+    align-items: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lifts up slightly */
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15); /* Glow effect */
+    border-color: var(--accent-color);
+}
+
+
+
+.project-info h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.project-info p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 20px;
+    background: transparent; /* Remove the old grey background */
+    padding: 0; /* Remove old padding */
+    text-align: left; /* Align text naturally */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: whitesmoke;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #898787;
+    color: white;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+    .project-card {
+        grid-template-columns: 1fr; /* Stack them on mobile */
+    }
+}
+
+.headerText {
+    margin-top: 15vh; /* Center it vertically a bit more */
+    margin-left: 5%;
+}
+
+.headerText h1 {
+    font-size: 4rem; /* Big and bold */
+    margin: 10px 0;
+    line-height: 1.1;
+}
+
+.highlight {
+    color: var(--accent-color); /* Makes your name pop */
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
