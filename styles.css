@@ -30,15 +30,15 @@ body {
 } */
 
 #aboutMe {
-    padding: 80px 0;
-    color: rgb(255, 255, 255);
+    padding: 100px 0;
+    color: var(--text-muted);
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    align-items: center; /* Centers image vertically with text */
 }
 
 .aboutCol1 {
@@ -46,9 +46,15 @@ body {
 }
 
 .aboutCol1 img {
-    width: 80%;
-    border-radius: 15px;
+    width: 100%;
+    border-radius: 20px;
+    /* Adds a soft glow behind your profile picture */
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.2); 
+    transition: transform 0.5s;
+}
 
+.aboutCol1 img:hover {
+    transform: scale(1.02);
 }
 
 .siteProfile img {
@@ -63,16 +69,17 @@ body {
 .subTitle {
     font-size: 60px;
     font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 20px;
 }
 
 .aboutCol2 p {
-    background: #8987877a;
-    display: flex;
-    /* FIX: Removed "margin-left: 170px;" which breaks mobile layout */
-    padding: 20px;
-    border-radius: 15px; /* Note: 15% is a very high radius, 15px might be better */
-    margin-bottom: 15px; /* Added to space out the paragraphs */
-    font-size: 27px;
+    font-size: 1.1rem;
+    line-height: 1.8; /* More breathing room between lines */
+    color: #d1d1d1;
+    margin-bottom: 25px;
+    background: transparent; /* No more grey box */
+    padding: 0;
 }
 
 .tabTitles {
@@ -82,44 +89,41 @@ body {
 
 /* FIX: Added styles to reset the <button> element */
 .tabLinks {
-    /* Reset button defaults */
-    background: none;
-    border: none;
-    color: white; 
-    font-family: 'poppins', sans-serif;
-
-    /* Your original styles */
     margin-right: 50px;
     font-size: 18px;
-    font-weight: 50;
+    font-weight: 500;
     cursor: pointer;
     position: relative;
-    padding: 0; /* Reset button padding */
+    padding: 5px;
+    background-color: var(--card-bg);
+    color: var(--bg-color); /* Muted by default */
+    transition: color 0.3s;
 }
 
-.tabLinks::after {
-    content: ' ';
-    width: 0;
-    height: 3px;
-    background: whitesmoke;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+.tabLinks.activeLink {
+    color: var(--accent-color); /* Active color */
 }
-
 .tabLinks.activeLink::after {
-    width: 50%;
+    width: 100%; /* Full underline for active */
+    background: var(--accent-color);
 }
 
 .tabContents ul li {
     list-style: none;
-    margin: 10px 0;
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(255,255,255,0.03); /* Very subtle card background */
+    border-left: 3px solid var(--accent-color); /* Cyan accent line on left */
+    border-radius: 0 10px 10px 0;
 }
 
 .tabContents ul li span {
+    color: var(--accent-color);
     font-size: 14px;
-    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 .tabContents {
