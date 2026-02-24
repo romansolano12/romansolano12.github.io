@@ -96,7 +96,7 @@ body {
     position: relative;
     padding: 5px;
     background-color: var(--card-bg);
-    color: var(--bg-color); /* Muted by default */
+    color: rgb(133, 130, 130); /* Muted by default */
     transition: color 0.3s;
 }
 
@@ -222,6 +222,12 @@ section.siteProfile {
     color: white;
     padding: 3%;
 }
+section.projects {
+    max-width: 1100px; /* Limits how wide the section can get */
+    margin: 0 auto; /* Perfectly centers the container on the page */
+    padding: 60px 20px; /* Gives some breathing room on the top/bottom and sides */
+}
+
 
 section.projects p {
     background: rgba(255, 255, 255, 0.341);
@@ -237,16 +243,20 @@ section.projects p {
 
 .projects a {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 
 .project-image {
     width: 100%;
+    max-height: 300px; /* Stops the image from getting ridiculously tall */
+    object-fit: cover; /* Acts like a background-image; crops neatly without squishing */
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
     transition: transform 0.3s;
+
 }
 
 footer {
@@ -455,9 +465,9 @@ section.websites {
     
     /* Keep your grid layout */
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 30px;
-    align-items: center;
+    grid-template-columns: 1.2fr 1fr; /* Text takes up a bit more space, image takes up less */
+    gap: 40px; /* Increase the space between the text and the image */
+    align-items:center;
 }
 
 .project-card:hover {
