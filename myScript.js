@@ -57,37 +57,18 @@ modal.addEventListener("click", function(event) {
     }
 });
 
-
-// --- INTERSECTION OBSERVER FOR ACTIVE NAV LINKS ---
-
-// Select all sections that have an ID and a corresponding nav link
-const sections = document.querySelectorAll("section[id]");
-
-const navObserverOptions = {
-    threshold: 0.6 // Trigger when 60% of the section is visible
-};
-
-const navObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            // Get the ID of the current section
-            const id = entry.target.getAttribute("id");
-            
-            // Remove 'active' class from all links
-            document.querySelectorAll(".nav-links li a").forEach((link) => {
-                link.classList.remove("active");
-            });
-
-            // Add 'active' class to the matching link
-            const activeLink = document.querySelector(`.nav-links li a[href="#${id}"]`);
-            if (activeLink) {
-                activeLink.classList.add("active");
-            }
-        }
+function copyEmail() {
+    const email = "Romansolano12@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById("emailBtn");
+        const originalText = btn.innerText;
+        
+        btn.innerText = "Email Copied!";
+        btn.style.background = "#28a745"; // Success green
+        
+        setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.background = ""; // Resets to your cyan
+        }, 2000);
     });
-}, navObserverOptions);
-
-// Tell the observer to watch each section
-sections.forEach((section) => {
-    navObserver.observe(section);
-});
+}
