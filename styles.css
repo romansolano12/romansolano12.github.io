@@ -7,8 +7,8 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 5 auto;
+    padding: 0 ;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -30,27 +30,38 @@ body {
 } */
 
 #aboutMe {
-    padding: 100px 0;
-    color: var(--text-muted);
+    padding-top: 100px;
+
 }
 
-.row {
+#aboutMe .container{
+    max-width: 1400px;
+    margin: 5 auto;
+    padding: 0 5%;
+}
+
+#aboutMe .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center; /* Centers image vertically with text */
+    align-items: flex-start; /* Centers image vertically with text */
+    gap: 80px;
 }
 
 .aboutCol1 {
-    flex-basis: 35%;
+    flex: 1 1 350px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .aboutCol1 img {
     width: 100%;
+    max-width: 400px;
     border-radius: 20px;
     /* Adds a soft glow behind your profile picture */
-    box-shadow: 0 0 30px rgba(0, 210, 255, 0.2); 
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2); 
     transition: transform 0.5s;
+    object-fit: cover;
 }
 
 .aboutCol1 img:hover {
@@ -70,7 +81,8 @@ body {
     font-size: 60px;
     font-weight: 600;
     color: var(--text-main);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 .aboutCol2 p {
@@ -222,42 +234,9 @@ section.siteProfile {
     color: white;
     padding: 3%;
 }
-section.projects {
-    max-width: 1100px; /* Limits how wide the section can get */
-    margin: 0 auto; /* Perfectly centers the container on the page */
-    padding: 60px 20px; /* Gives some breathing room on the top/bottom and sides */
-}
 
 
-section.projects p {
-    background: rgba(255, 255, 255, 0.341);
-    text-align: center;
-    font-size: 40px;
-    padding: 50px;
-    margin: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-.projects a {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-
-.project-image {
-    width: 100%;
-    max-height: 300px; /* Stops the image from getting ridiculously tall */
-    object-fit: cover; /* Acts like a background-image; crops neatly without squishing */
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    transition: transform 0.3s;
-
-}
 
 footer {
     background-color: rgba(128, 128, 128, 0.463);
@@ -444,54 +423,8 @@ section.websites {
     }
 }
 
-/* Project Layout Improvements */
-.project-container {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.project-card {
-    background: rgba(30, 31, 36, 0.7); /* Semi-transparent */
-    backdrop-filter: blur(10px); /* The "Frosted Glass" effect */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 40px;
-    margin-bottom: 40px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
-    /* Keep your grid layout */
-    display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Text takes up a bit more space, image takes up less */
-    gap: 40px; /* Increase the space between the text and the image */
-    align-items:center;
-}
-
-.project-card:hover {
-    transform: translateY(-5px); /* Lifts up slightly */
-    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15); /* Glow effect */
-    border-color: var(--accent-color);
-}
 
 
-
-.project-info h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: var(--text-main);
-}
-
-.project-info p {
-    color: var(--text-muted);
-    font-size: 16px;
-    margin-bottom: 20px;
-    background: transparent; /* Remove the old grey background */
-    padding: 0; /* Remove old padding */
-    text-align: left; /* Align text naturally */
-}
 
 .btn {
     display: inline-block;
@@ -509,20 +442,16 @@ section.websites {
     color: white;
 }
 
-/* Responsive fix for mobile */
-@media (max-width: 768px) {
-    .project-card {
-        grid-template-columns: 1fr; /* Stack them on mobile */
-    }
-}
+
 
 .headerText {
-    margin-top: 15vh; /* Center it vertically a bit more */
+    margin-top: 5vh; /* Center it vertically a bit more */
     margin-left: 5%;
+
 }
 
 .headerText h1 {
-    font-size: 4rem; /* Big and bold */
+    font-size: 5rem; /* Big and bold */
     margin: 10px 0;
     line-height: 1.1;
 }
@@ -537,4 +466,98 @@ section.websites {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+
+/* Projects Section Container */
+.projects {
+    padding: 80px 5%;
+    max-width: 1400px; /* Matching your About Me width */
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-color);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* The Grid Logic */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Individual Project Card */
+.project-card {
+    background: rgba(30, 31, 36, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden; /* Clips the image to the border-radius */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+}
+
+/* Image Handling */
+.project-image-container {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    overflow: hidden;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretching */
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Info Section */
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Skill Tags inside the card */
+.tag {
+    display: inline-block;
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--accent-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+    .project-card {
+        grid-template-columns: 1fr; /* Stack them on mobile */
+    }
 }
