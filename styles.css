@@ -124,6 +124,10 @@ body {
     flex-basis: 60%;
 }
 
+.intro-description{
+    font-size: 1.4rem;
+}
+
 .subTitle {
     font-size: 60px;
     font-weight: 600;
@@ -316,7 +320,7 @@ h5 {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    border: 2px solid #555;
+    
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
@@ -324,9 +328,8 @@ h5 {
 .cert-item img.cert-thumbnail:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px ;
+    color: var(--accent-color);
 }
-
-
 
 
 .contact-section {
@@ -368,6 +371,8 @@ h5 {
     transform: translateY(-8px) scale(1.1);
     text-shadow: 0 0 15px rgba(0, 210, 255, 0.8), 0 0 30px rgba(0,210,255,0.4);
 }
+
+
 
 .btn {
     display: inline-block;
