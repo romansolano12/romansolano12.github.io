@@ -8,19 +8,25 @@
   <title>Roman Gonzalez</title>
   <link rel="stylesheet" href="styles.css?v=1.1">
   <script src="https://kit.fontawesome.com/a9336d3969.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-  <header id="header">
-    <nav>
-      <ul>
-        <li><a href="#contactInfo">Contact Info</a></li>
-        <li><a href="#siteProfile">Sites</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href=#certificates>Certificates</a></li>
-      </ul>
-    </nav>
+<header id="header">
+  <nav class="nav-container">
+    <a href="#headerText" class="logo">Roman<span>.</span></a>
+    
+    <ul class="nav-links">
+      <li><a href="#aboutMe">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
+<section id="headerText">
     <div class="headerText">
       <p class="subtitle">Software Developer | Data Analyst | Cybersecurity</p>
       <h1>Hi, I'm <span class="highlight">Roman</span></h1>
@@ -28,8 +34,8 @@
         I build data-driven applications and secure systems.
       </p>
     </div>
+</section>
 
-  </header>
 
   <section id="aboutMe">
     <div class="container">
@@ -87,6 +93,9 @@
     </div>
   </section>
 
+  <section id="skills" class="skills">
+  <h2 class="section-title">// Skills & Expertise</h2>
+  
   <div class="tabTitles">
     <button class="tabLinks activeLink" onclick="opentab('software', this)">Software Development</button>
     <button class="tabLinks" onclick="opentab('dataAnalyst', this)">Data Analyst</button>
@@ -95,7 +104,7 @@
 
   <div class="tabContents activeTab" id="software">
     <ul>
-      <li><span>Skills</span><br>Java | Javascript | HTML | CSS | Spring | React | Node</li>
+      <li><span>Skills</span><br><i class="fa-brands fa-java"></i> Java | <i class="fa-brands fa-js"></i> Javascript | <i class="fa-brands fa-html5"></i> HTML | <i class="fa-brands fa-css3-alt"></i> CSS | Spring | <i class="fa-brands fa-react"></i> React | <i class="fa-brands fa-node-js"></i> Node</li>
       <li><span>Software</span><br>GitHub | VS Code | IntelliJ </li>
       <li><span>Education</span><br>We Can Code IT, Certificate of Fullstack Java Software Development— 2023</li>
     </ul>
@@ -103,46 +112,23 @@
 
   <div class="tabContents" id="dataAnalyst">
     <ul>
-      <li><span>Skills</span><br>Python | SQL | Spreadsheets | RStudio | Data Management</li>
+      <li><span>Skills</span><br><i class="fa-brands fa-python"></i> Python | SQL | Spreadsheets | RStudio | Data Management</li>
       <li><span>Software</span><br>Microsoft 365 Suite | Google Workspace | Slack | Zoom | Kaggle | Loom</li>
-      <li><span>Education</span><br>Merit America, Google Data Analytics certification- 2024<br>Multiverse, Advanced
-        Analytics- 2025</li>
+      <li><span>Education</span><br>Merit America, Google Data Analytics certification- 2024<br>Multiverse, Advanced Analytics- 2025</li>
     </ul>
   </div>
+  
   <div class="tabContents" id="cybersecurity">
     <ul>
-      <li><span>Skills</span><br>Vulnerabilities and threats | Risk management and mitigation | Network Security |
-        Access
-        control</li>
+      <li><span>Skills</span><br>Vulnerabilities and threats | Risk management and mitigation | Network Security | Access control</li>
       <li><span>Software</span><br>WireShark | Codio | PowerShell | Linux | Windows | MacOS </li>
       <li><span>Education</span><br>Correlation One, Information Security Analyst- 2024 </li>
     </ul>
   </div>
+</section>
 
   <main>
-    <section id="contactInfo" class="contactInfo">
-      <h2>Contact Info</h2>
-      <p>Email: Romansolano12@gmail.com</p>
-    </section>
 
-    <section id="siteProfile" class="siteProfile">
-      <h2>Site Profile</h2>
-      <div class="site-gallery">
-
-        <div class="site-item">
-          <a href="https://github.com/romansolano12"><img src="images/GithubUpdate.png" alt="GitHub Page"
-              class="site-thumbnail"></a>
-        </div>
-        <div class="site-item">
-          <a href="https://www.linkedin.com/in/roman-gonzalez-a298b8276/"><img src="images/LinkedInUpdate.png"
-              alt="LinkedIn page" class="site-thumbnail"></a>
-        </div>
-        <div class="site-item">
-          <a href="https://www.kaggle.com/romangonzalez713"><img src="images/screenshot-kaggle.png" alt="Kaggle page"
-              class="site-thumbnail"></a>
-        </div>
-      </div>
-    </section>
 
     <section id="projects" class="projects">
 
@@ -185,7 +171,7 @@
     </section>
 
     <section id="certificates" class="certificates">
-      <h2>My Certificates</h2>
+      <h2 class="section-title">// Certificates</h2>
       <div class="cert-gallery">
 
         <div class="cert-item">
@@ -204,24 +190,37 @@
         </div>
       </div>
     </section>
-
   </main>
-  <div id="certModal" class="modal">
-    <span class="close-modal">&times;</span>
-    <img class="modal-content" id="modalImg">
-    <div id="caption"></div>
-  </div>
-  <footer>
-    <h3>Websites used as reference material.</h3>
-    <section class="websites">
-      <p><a href="https://www.w3schools.com/">w3schools.com</a></p>
-      <p><a href="https://coolors.co/">coolors.co</a></p>
-    </section>
-    <div>
-      <small>&copy;Copyright 2023</small>
+
+  <section id="contact" class="contact-section">
+    <h2 class="section-title">// Get In Touch</h2>
+    <div class="contact-container">
+        <div class="contact-text">
+            <p>I am currently open to <span class="highlight">Data Analyst</span> or <span class="highlight">Software Engineering</span> opportunities. Whether you have a question or just want to say hi, my inbox is always open!</p>
+            
+            <div class="social-icons">
+                <a href="https://github.com/romansolano12" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/romansolano12/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.kaggle.com/romangonzalez713" target="_blank"><i class="fa-brands fa-kaggle"></i></a>
+            </div>
+        </div>
+        
+        <div class="contact-buttons">
+            <a href="mailto:Romansolano12@gmail.com" class="btn">Email Me</a>
+        </div>
     </div>
-    <a href="#header" class="top-button">Back to top</a>
-  </footer>
+</section>
+
+<footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Roman Gonzalez | Built with HTML, CSS, & JS</p>
+      <div class="footer-links">
+        <a href="https://github.com/romansolano12" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/romansolano12/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.kaggle.com/romangonzalez713" target="_blank"><i class="fa-brands fa-kaggle"></i></a>
+      </div>
+    </div>
+</footer>
 
   <script src="myScript.js"></script>
 </body>
