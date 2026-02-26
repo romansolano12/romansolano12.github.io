@@ -578,3 +578,63 @@ h5 {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+@media (max-width: 768px) {
+    /* Stack the logo and nav links vertically */
+    .nav-container {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: space-around; /* Spans across the screen evenly */
+    }
+
+    .nav-links li {
+        margin-left: 0; /* Remove the desktop-only side margin */
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerText h1 {
+        font-size: 3rem; /* Scaled down for mobile screens */
+        text-align: left;
+    }
+
+    .subtitle {
+        font-size: 0.9rem; /* Smaller sub-heading for mobile */
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cert-gallery {
+        grid-template-columns: 1fr; /* Stack certificates one per row on phones */
+        gap: 20px;
+    }
+
+    .cert-thumbnail {
+        height: auto; /* Let them maintain their natural aspect ratio on mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stacks the image on top of the text */
+        gap: 30px;
+    }
+
+    .aboutCol1, .aboutCol2 {
+        flex-basis: 100%; /* Each takes the full width */
+    }
+
+    .aboutCol1 img {
+        max-width: 250px; /* Center and size the photo for mobile */
+        margin: 0 auto;
+        display: block;
+    }
+}
+
