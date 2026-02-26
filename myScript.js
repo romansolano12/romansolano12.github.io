@@ -58,7 +58,7 @@ modal.addEventListener("click", function(event) {
 });
 
 function copyEmail() {
-    const email = "Romansolano12@gmail.com";
+    const email = "Romansolano12@Gmail.com";
     navigator.clipboard.writeText(email).then(() => {
         const btn = document.getElementById("emailBtn");
         const originalText = btn.innerText;
