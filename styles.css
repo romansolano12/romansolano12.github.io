@@ -566,3 +566,15 @@ h5 {
     from {transform: scale(0.8); opacity: 0;}
     to {transform: scale(1); opacity: 1;}
 }
+
+.cursor {
+    color: var(--accent-color); /* Your cyan glow */
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1.2s infinite; /* Pulsing effect */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
