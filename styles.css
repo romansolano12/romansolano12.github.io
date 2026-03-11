@@ -497,11 +497,12 @@ h5 {
     display: inline-block;
     background: rgba(0, 210, 255, 0.1);
     color: var(--accent-color);
-    padding: 8px 12px;
+    padding: 5px 12px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
     margin-right: 8px;
+    margin-top: 8px;
 }
 
 /* Responsive fix for mobile */
