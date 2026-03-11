@@ -72,3 +72,23 @@ function copyEmail() {
         }, 2000);
     });
 }
+
+// Logic to handle multiple project modals
+document.querySelectorAll('.open-modal').forEach(button => {
+    button.addEventListener('click', function() {
+        const modalId = this.getAttribute('data-target');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; // Prevents background scrolling
+        }
+    });
+});
+
+// Close logic for all modals
+document.querySelectorAll('.close-modal').forEach(closeBtn => {
+    closeBtn.addEventListener('click', function() {
+        this.closest('.modal').style.display = "none";
+        document.body.style.overflow = "auto";
+    });
+});
