@@ -79,5 +79,9 @@ def chat_endpoint():
 
 # 5. EXECUTION
 if __name__ == "__main__":
-    # Use port 5000 for local testing on your Mac
-    app.run(port=5000, debug=True)
+    # Render provides a 'PORT' environment variable. 
+    # If it's not there (like when you run locally), it defaults to 10000.
+    port = int(os.environ.get("PORT", 10000))
+    
+    # host='0.0.0.0' tells the app to listen on all available network interfaces
+    app.run(host='0.0.0.0', port=port)
