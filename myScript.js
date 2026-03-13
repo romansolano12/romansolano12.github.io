@@ -120,7 +120,8 @@ async function sendMessage() {
     const loadingId = 'loading-' + Date.now();
     messages.innerHTML += `
         <div id="${loadingId}" style="color: #00d2ff; font-size: 11px; margin-bottom: 15px; animate: pulse 1.5s infinite;">
-            >> ACCESSING_CORE_DATABASE...
+            >> ACCESSING_CORE_DATABASE... <br>
+        <span style="font-size: 9px; color: #666;">(Server may take 30s to wake up on first query)</span>
         </div>
     `;
 
