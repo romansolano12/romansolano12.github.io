@@ -168,7 +168,7 @@ async function sendMessage() {
         input.disabled = false;
         button.disabled = false;
         button.style.opacity = "1";
-        button.innerText = "EXECUTE";
+        button.innerText = "Send";
         input.focus(); // Put the cursor back in the box for the user
     }
     
