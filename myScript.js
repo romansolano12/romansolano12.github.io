@@ -102,8 +102,15 @@ async function sendMessage() {
     const input = document.getElementById('chat-input');
     const messages = document.getElementById('messages');
     const question = input.value.trim();
+    const button = document.getElementById('send-btn');
+
 
     if (!question) return;
+
+    input.disabled = true;
+    button.disabled = true;
+    button.style.opacity = "0.5";
+    button.innerText = "WAIT...";
 
     // 1. Display User Message (Styled for Dark Theme)
     messages.innerHTML += `
@@ -132,6 +139,13 @@ async function sendMessage() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: question })
         });
+
+        if (!response.ok) {
+            if (response.status === 429) {
+                throw new Error("SYSTEM_COOLING: The AI is catching its breath. Please try again in 60 seconds.");
+            }
+            throw new Error("SYSTEM_OFFLINE: Secure link could not be established.");
+        }
         
         const data = await response.json();
         document.getElementById(loadingId).remove();
@@ -148,6 +162,14 @@ async function sendMessage() {
             <span style="color: #ff4444;">>> CONNECTION_ERROR: SECURE_LINK_OFFLINE.</span><br>
             <span style="font-size: 10px;">Redirecting to LinkedIn for manual override...</span>
         `;
+    } finally {
+        // --- UNLOCK UI ---
+        // This runs whether the try SUCCEEDS or FAILS
+        input.disabled = false;
+        button.disabled = false;
+        button.style.opacity = "1";
+        button.innerText = "EXECUTE";
+        input.focus(); // Put the cursor back in the box for the user
     }
     
     messages.scrollTop = messages.scrollHeight;
