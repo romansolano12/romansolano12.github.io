@@ -92,3 +92,69 @@ document.querySelectorAll('.close-modal').forEach(closeBtn => {
         document.body.style.overflow = "auto";
     });
 });
+
+function toggleChat() {
+    const chatWindow = document.getElementById('chat-window');
+    chatWindow.style.display = chatWindow.style.display === 'none' ? 'flex' : 'none';
+}
+
+async function sendMessage() {
+    const input = document.getElementById('chat-input');
+    const messages = document.getElementById('messages');
+    const question = input.value.trim();
+
+    if (!question) return;
+
+    // 1. Display User Message (Styled for Dark Theme)
+    messages.innerHTML += `
+        <div style="margin-bottom: 15px; border-left: 2px solid #00d2ff; padding-left: 10px;">
+            <span style="color: #555; font-size: 10px; font-weight: bold; letter-spacing: 1px;">USER_QUERY ></span>
+            <div style="color: #ffffff; margin-top: 4px;">${question}</div>
+        </div>
+    `;
+    
+    input.value = '';
+    messages.scrollTop = messages.scrollHeight;
+
+    // 2. Loading State
+    const loadingId = 'loading-' + Date.now();
+    messages.innerHTML += `
+        <div id="${loadingId}" style="color: #00d2ff; font-size: 11px; margin-bottom: 15px; animate: pulse 1.5s infinite;">
+            >> ACCESSING_CORE_DATABASE...
+        </div>
+    `;
+
+    try {
+        // Update this URL once you deploy your Flask app to Render/Vercel
+        const response = await fetch('http://127.0.0.1:5000/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ message: question })
+        });
+        
+        const data = await response.json();
+        document.getElementById(loadingId).remove();
+
+        // 3. Display AI Response (Styled as Terminal Output)
+        messages.innerHTML += `
+            <div style="margin-bottom: 20px;">
+                <span style="color: #00d2ff; font-size: 10px; font-weight: bold; letter-spacing: 1px;">ROMAN_AI_OUTPUT ></span>
+                <div style="color: #e0e0e0; margin-top: 4px; line-height: 1.5;">${data.response}</div>
+            </div>
+        `;
+    } catch (error) {
+        document.getElementById(loadingId).innerHTML = `
+            <span style="color: #ff4444;">>> CONNECTION_ERROR: SECURE_LINK_OFFLINE.</span><br>
+            <span style="font-size: 10px;">Redirecting to LinkedIn for manual override...</span>
+        `;
+    }
+    
+    messages.scrollTop = messages.scrollHeight;
+}
+
+// Allow "Enter" key to send message
+document.getElementById('chat-input').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});
