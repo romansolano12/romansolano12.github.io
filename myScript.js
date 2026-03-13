@@ -126,7 +126,7 @@ async function sendMessage() {
 
     try {
         // Update this URL once you deploy your Flask app to Render/Vercel
-        const response = await fetch('http://127.0.0.1:5000/chat', {
+        const response = await fetch('https://roman-ai-assistant.onrender.com', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ message: question })
