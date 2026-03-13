@@ -39,7 +39,7 @@ def get_ai_response(user_query):
         with open("portfolio_data.txt", "r") as f:
             context = f.read()
             
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         
         # Construct the specialized prompt
         prompt = f"""
