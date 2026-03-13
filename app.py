@@ -63,7 +63,8 @@ def get_ai_response(user_query):
     except FileNotFoundError:
         return "ERROR: KNOWLEDGE_BASE_OFFLINE. Please alert the developer."
     except Exception as e:
-        return f"SYSTEM_OVERLOAD: I'm resting right now. Reach out to the real Roman on LinkedIn! (Error: {e})"
+        print(f"debug_error:{e}")
+        return f"SYSTEM_COOLING: I'm processing high traffic right now. Please try again in 60 seconds or reach out to the real Roman on LinkedIn!"
 
 # 4. THE WEB API ROUTE
 @app.route('/chat', methods=['POST'])
