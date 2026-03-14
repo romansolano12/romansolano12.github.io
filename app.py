@@ -29,6 +29,7 @@ def is_safe(user_input):
     query_lower = user_input.lower()
     return not any(phrase in query_lower for phrase in forbidden_phrases)
 
+
 # 3. CORE AI LOGIC (RAG)
 def get_ai_response(user_query):
     if not is_safe(user_query):
@@ -71,6 +72,7 @@ def get_ai_response(user_query):
 def chat_endpoint():
     data = request.json
     user_query = data.get("message", "")
+    print(f">>> USER_QUESTION: {user_query}")
     
     if not user_query:
         return jsonify({"response": "NO_DATA_RECEIVED"}), 400
