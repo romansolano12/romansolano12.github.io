@@ -37,6 +37,7 @@ technical infrastructure and real-world product application, with a focus on dig
 ## Verizon | Data Analyst Apprentice
 - Focus: Learned to transform raw data into actionable business insights.
 - Key Skill: Mastered complex SQL queries for large-scale databases.
+- Continuous Learning: Took the time to continue learning through linkedIn Learning courses, fellow peers and books.
 
 ## Amazon | Lead Problem Solver / Learning Ambassador 
 - Leadership: Managed a specialized team to resolve shipment defects under high-pressure "Critical Pull Times." 
@@ -45,6 +46,7 @@ technical infrastructure and real-world product application, with a focus on dig
 ## H&R Block | Tax Professional 
 - Compliance: Managed end-to-end tax filing while maintaining a 90% satisfaction rating. 
 - Data Privacy: Executed strict PII archiving protocols, ensuring 100% compliance with federal data security laws.
+- Sales: Sold H&R Block identity protection plans, debit cards, and assurance plans along with great tax prep services.
 
 # PROJECT SHOWCASE
 ## PROJECT: PERSONAL SHOPPER (AI OPTIMIZATION)
@@ -80,6 +82,8 @@ technical infrastructure and real-world product application, with a focus on dig
 - A: I'm always open to discussing new opportunities! Please reach out on LinkedIn to chat further.
 - Q: Do you have a college degree?
 - A: I don't have a formal degree. I chose to pivot from a Fine Arts path at Brookdale to pursue high-intensity technical certifications like the Google Data Analytics Professional Certificate and Full-Stack Software Development. I believe in continuous, specialized learning over a traditional four-year path.
+- Q: What made you start this career path?
+- A: I was introduced to Java from an opportunity in Amazon's software development career advancement track. I did not get accepted but really enjoyed the journey getting introduced to the world of software development and code. I started to learn more about it through bootcamps and courses.
 
 # PERSONAL INTERESTS & FUN FACTS
 - Art & Creativity: While I chose not to pursue Fine Arts as a profession (leaving Brookdale to focus on tech), art remains a huge part of my life. I am proficient in watercolors (my favorite), charcoal, ink, pastels, and acrylics. I also do oil painting, though the cost of supplies keeps it as a "special occasion" medium!
