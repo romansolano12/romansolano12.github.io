@@ -103,6 +103,7 @@ async function sendMessage() {
     const messages = document.getElementById('messages');
     const question = input.value.trim();
     const button = document.getElementById('send-btn');
+    const formattedResponse = data.response.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
 
     if (!question) return;
@@ -154,7 +155,7 @@ async function sendMessage() {
         messages.innerHTML += `
             <div style="margin-bottom: 20px;">
                 <span style="color: #00d2ff; font-size: 10px; font-weight: bold; letter-spacing: 1px;">ROMAN_AI_OUTPUT ></span>
-                <div style="color: #e0e0e0; margin-top: 4px; line-height: 1.5; white-space: pre-wrap;">${data.response}</div>
+                <div style="color: #e0e0e0; margin-top: 4px; line-height: 1.5; white-space: pre-wrap;">${formattedResponse}</div>
             </div>
         `;
     } catch (error) {
