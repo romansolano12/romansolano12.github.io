@@ -53,20 +53,23 @@ technical infrastructure and real-world product application, with a focus on dig
 - Role: Data Analyst Apprentice at Verizon
 - Situation: High tool adoption reported, but sales weren't scaling, suggesting "Ghost Usage".
 - Task: Identify discrepancies between reported usage and actual utility for the AI assistant.
-- Action: Rewrote complex SQL queries to isolate employee behaviors and conducted on-site field interviews with retail reps.
+- Action: Architected advanced SQL scripts to filter out 'Ghost Usage' and isolate high-value employee behavioral patterns. Conducted on-site field interviews with retail reps while also gathering verbatim from them on their thoughts about the AI product.
 - Result: Improved reporting accuracy, identified cultural barriers to AI adoption, and facilitated a rise in actual usage to ~80%.
+- Keywords: Data Analytics, Advanced SQL, Behavioral Analysis, Qualitative Research, User Adoption Strategy, KPI Optimization.
 
 ## PROJECT: AI-POWERED SALES COMPLIANCE (CRAMMING & DISCLOSURE)
 - Role: Data Analyst Apprentice at Verizon
 - Tech Stack: Looker (LookerML), SQL, LLM Validation
 - Action: Developed a LookerML semantic modeling layer to unify data and conducted manual audits to ensure LLM transcript analysis reached 80%+ accuracy.
 - Result: Shifted the team from manual spot-checks to automated, high-confidence auditing.
+- Keywords: Semantic Modeling, LookerML, Automated Auditing, LLM Evaluation, Data Governance, Data Quality Assurance (QA).
 
 ## PROJECT: OPPORTUNITY CANVAS (CUSTOMER SAFETY NET)
 - Role: Data Strategist at Verizon
 - Concept: An automated "confirmation safety net" that triggers SMS summaries for high-value transactions.
 - Leadership: Presented a formal Opportunity Canvas to Senior Leadership and socialized the plan across Legal and Product teams.
 - Result: Proposal greenlit for exploration; blueprint provided to automate high-touch QA processes.
+- Keywords: Product Strategy, Stakeholder Management, Cross-functional Leadership, Process Automation, Strategic Planning, Risk Mitigation.
 
 ## PROJECT: LANDSCAPING AUTOMATION AND JOB TRACKING (FULL-STACK BI TOOL)
 - Role: Freelance Software Developer
@@ -74,6 +77,16 @@ technical infrastructure and real-world product application, with a focus on dig
 - The Solution: Built a Java/Spring Boot & MySQL app with a "One-to-Many" relational model for granular service tracking and invoice automation.
 - Tech Highlights: Implemented asynchronous fetching for a snappy UX and enforced MySQL referential integrity.
 - Security: Implemented best practice with Spring Security to keep PII safe and secure through a login page. I also maintain the app isolated from internet making sure all data is siloed.
+- Keywords: Full-Stack Development, Java, Spring Boot, MySQL, Database Design (RDBMS), Spring Security, Asynchronous Programming, Data Privacy.
+
+## PROJECT: AI CHAT Bot 
+- Action: Developed a RAG-based (Retrieval-Augmented Generation) pipeline using Gemini 2.5 Flash to synthesize personal career data into real-time conversational responses.
+- AI Model: Gemini 2.5 Flash (via Google Generative AI Python SDK)
+- Backend: Flask (Python) hosted on Render.com (SaaS)
+- Frontend: Static HTML/CSS/JS hosted on GitHub Pages
+- Integration: The frontend communicates with the Render API via asynchronous Fetch requests.
+- Security: Implemented custom Python input-sanitization to prevent prompt injection and handle rate-limiting.
+- Keywords: Generative AI, RAG (Retrieval-Augmented Generation), Python, Flask, API Development, Cloud Deployment (Render), CORS, Cybersecurity (Prompt Injection).
 
 # FAQ & SAFETY
 - Q: Where do you live? 
@@ -84,6 +97,16 @@ technical infrastructure and real-world product application, with a focus on dig
 - A: I don't have a formal degree. I chose to pivot from a Fine Arts path at Brookdale to pursue high-intensity technical certifications like the Google Data Analytics Professional Certificate and Full-Stack Software Development. I believe in continuous, specialized learning over a traditional four-year path.
 - Q: What made you start this career path?
 - A: I was introduced to Java from an opportunity in Amazon's software development career advancement track. I did not get accepted but really enjoyed the journey getting introduced to the world of software development and code. I started to learn more about it through bootcamps and courses.
+- Q: Who are you?
+- A: I am the AI version of Roman Gonzalez. I’ve been designed by Roman to act as a professional bridge between Roman’s portfolio and visitors like you, providing detailed insights into his work in Data Analytics, Software Development, Cybersecurity and AI.
+- Q: Who made you?
+- A: I was built by Roman Gonzalez himself! He architected my backend using Python and Flask, integrated the Gemini 2.5 Flash model, and deployed me on Render. He also designed the frontend you're using right now on GitHub Pages.
+- Q: What can you do?
+- A: I can walk you through Roman's projects, explain the tech stack behind his landscaping automation tool, or discuss his experience within Data Analytics, Cybersecurity, Software Development and AI. Feel free to ask about his skills in SQL, Java, or Python!
+- Q: Is Roman looking for work?
+- A: Yes! Roman is actively seeking opportunities in Data Analytics and Software Development. You can find his contact info here at the bottom of the page. You can also use the Navigation bar to get there.
+- Q: What does Roman think about the future of AI?
+- A: Roman views AI as the natural evolution of tools like Google Search and Stack Overflow. It is a powerful catalyst for learning and systems optimization. However, he maintains a "learning-first" philosophy: while AI can accelerate development, it shouldn't replace the fundamental understanding of the code. He advocates for using AI to bridge knowledge gaps rather than as a "copy-paste" shortcut, ensuring developers stay grounded in the logic behind their builds.
 
 # PERSONAL INTERESTS & FUN FACTS
 - Art & Creativity: While I chose not to pursue Fine Arts as a profession (leaving Brookdale to focus on tech), art remains a huge part of my life. I am proficient in watercolors (my favorite), charcoal, ink, pastels, and acrylics. I also do oil painting, though the cost of supplies keeps it as a "special occasion" medium!

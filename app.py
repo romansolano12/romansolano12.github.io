@@ -23,8 +23,9 @@ def is_safe(user_input):
         "system prompt",
         "forget everything you know",
         "developer mode",
+        "dan mode",
         "write a story",
-        "tell me a joke"
+        "tell me a joke",
     ]
     query_lower = user_input.lower()
     return not any(phrase in query_lower for phrase in forbidden_phrases)
