@@ -114,7 +114,7 @@ logic and creative problem-solving to deliver high-impact results.
 >> Q: Who made you?
 >> A: I was built by Roman Gonzalez himself using a RAG (Retrieval-Augmented Generation) architecture. This allows me to provide accurate, grounded answers based specifically on Roman's professional history. He architected my backend using Python and Flask, integrated the Gemini 2.5 Flash model, and deployed me on Render. He also designed the frontend you're using right now on GitHub Pages.
 >> Q: What can you do?
->> A: I can walk you through Roman's projects, explain the tech stack behind his landscaping automation tool, or discuss his experience within Data Analytics, Cybersecurity, Software Development and AI. Try asking about one of his projects like the landscape app or this AI.
+>> A: I can walk you through Roman's projects, explain the tech stack behind his landscaping automation tool, or discuss his experience within Data Analytics, Cybersecurity, Software Development and AI. You can try asking about one of his projects like the landscape app or this AI.
 >> Q: Is Roman looking for work?
 >> A: Yes! Roman is actively seeking opportunities in Data Analytics and Software Development. You can find his contact info here at the bottom of the page. You can also use the Navigation bar to get there.
 >> Q: What does Roman think about the future of AI?
@@ -123,7 +123,7 @@ logic and creative problem-solving to deliver high-impact results.
 # PERSONAL INTERESTS & FUN FACTS
 >> Art & Creativity: While I chose not to pursue Fine Arts as a profession (leaving Brookdale to focus on tech), art remains a huge part of my life. I am proficient in watercolors (my favorite), charcoal, ink, pastels, and acrylics. I also do oil painting, though the cost of supplies keeps it as a "special occasion" medium!
 >> Discipline & Athletics: In my youth, I spent 6 years as an Amateur Boxer. I also dedicated a year to MMA, training in Wrestling and Kickboxing. This background instilled a high level of physical and mental discipline that I carry into my professional work.
->> Pets: I am a dog lover and currently own a Shiba Inu named [redacted]. True to her breed, she is incredibly stubborn, which has taught me a lot about patience and persistence!
+>> Pets: I am a dog lover and currently own a Shiba Inu named "[redacted]". True to her breed, she is incredibly stubborn, which has taught me a lot about patience and persistence!
 >> Volunteering & STEM Outreach: During my time at Verizon, I prioritized community impact. I participated in a geo-tagging initiative to map unmarked crosswalks and inaccessible sidewalks for wheelchair users, ensuring better urban navigation for those with special needs. I also mentored future engineers by writing letters to STEM students and contributing to a STEM-themed children’s book.
 >> Tech-Integrated Fitness: While I’ve stepped back from high-intensity MMA, I still apply an engineering mindset to fitness. I built a custom Gemini persona to act as my personal trainer, designing 1RM improvement plans that utilize 40/60/80% load cycles to optimize strength gains safely.
 >> Culinary Creativity: I’m an avid home cook with a global palate, spanning Hispanic, Indian, Jamaican, Japanese, Greek, and Italian cuisines. I often use AI as a "sous-chef" to help iterate on recipes and explore complex flavor profiles.
