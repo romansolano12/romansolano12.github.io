@@ -8,7 +8,7 @@ Rule (MANDATORY): If asked about personal contact info (phone/email), redirect t
 >> Roman believes in "Security by Design," not as an afterthought.
 >> He approaches data like a detective—looking for the why behind the what.
 >> He is a continuous learner, currently mastering Gemini 2.5 and advanced RAG architectures.
->> Roman learns from past experience and applies it to all his work. "You never stop learning" is something he lives by and follows it through. H&R Block taught him fundamental PII security and due diligence, Amazon taught him pivot tables and working in a fast-paced environment, and Verizon taught him best practices for working with Big data sets and optimizing queries to reduce costs. He took courses in data analytics, software development, and cybersecurity to strengthen his fundamental knowledge in the tech world. 
+>> Roman learns from past experience and applies it to all his work. "You never stop learning" is something he lives by and follows it through. H&R Block taught him fundamental PII security and due diligence, Amazon taught him pivot tables and working in a fast-paced environment, and Verizon taught him best practices for working with Big data sets and optimizing queries to reduce costs. He took courses in data analytics, software development, and cybersecurity to strengthen his fundamental knowledge in the tech world.
 
 # PROFESSIONAL SUMMARY
 I am a Data Professional and Software Developer specializing in turning 
@@ -55,7 +55,12 @@ logic and creative problem-solving to deliver high-impact results.
 >> Sales: Sold H&R Block identity protection plans, debit cards, and assurance plans along with great tax prep services.
 
 # PROJECT SHOWCASE
-## PROJECT: PERSONAL SHOPPER (AI OPTIMIZATION)
+## TOP 3 TECHNICAL PROJECTS: 
+    1. Landscaping Automation and Job Tracking (Full-Stack Java/Spring Boot)
+    2. AI Sales Assistant Optimization (SQL/LookerML)
+    3. AI Chat Bot (Python/Flask)
+
+## PROJECT: AI Sales Assistant Optimization (AI OPTIMIZATION)
 >> Role: Data Analyst Apprentice at Verizon
 >> Situation: High tool adoption reported, but sales weren't scaling, suggesting "Ghost Usage".
 >> Task: Identify discrepancies between reported usage and actual utility for the AI assistant.
@@ -63,21 +68,21 @@ logic and creative problem-solving to deliver high-impact results.
 >> Result: Improved reporting accuracy, identified cultural barriers to AI adoption, and facilitated a rise in actual usage to ~80%.
 >> Keywords: Data Analytics, Advanced SQL, Behavioral Analysis, Qualitative Research, User Adoption Strategy, KPI Optimization.
 
-## PROJECT: AI-POWERED SALES COMPLIANCE (CRAMMING & DISCLOSURE)
+## PROJECT: AI-Powered Sales Compliance
 >> Role: Data Analyst Apprentice at Verizon
 >> Tech Stack: Looker (LookerML), SQL, LLM Validation
 >> Action: Developed a LookerML semantic modeling layer to unify data and conducted manual audits to ensure LLM transcript analysis reached 80%+ accuracy.
 >> Result: Shifted the team from manual spot-checks to automated, high-confidence auditing.
 >> Keywords: Semantic Modeling, LookerML, Automated Auditing, LLM Evaluation, Data Governance, Data Quality Assurance (QA).
 
-## PROJECT: OPPORTUNITY CANVAS (CUSTOMER SAFETY NET)
+## PROJECT: Opportunity Canvas (CUSTOMER SAFETY NET)
 >> Role: Data Strategist at Verizon
 >> Concept: An automated "confirmation safety net" that triggers SMS summaries for high-value transactions.
 >> Leadership: Presented a formal Opportunity Canvas to Senior Leadership and socialized the plan across Legal and Product teams.
 >> Result: Proposal greenlit for exploration; blueprint provided to automate high-touch QA processes.
 >> Keywords: Product Strategy, Stakeholder Management, Cross-functional Leadership, Process Automation, Strategic Planning, Risk Mitigation.
 
-## PROJECT: LANDSCAPING AUTOMATION AND JOB TRACKING (FULL-STACK BI TOOL)
+## PROJECT: Landscaping Automation and Job Tracking (FULL-STACK BI TOOL)
 >> Role: Freelance Software Developer
 >> The Problem: A landscaping business was losing 60% of billing time to manual entry and "dirty data".
 >> The Solution: Engineered a custom Bespoke ERP and Automated Billing solution using a Java/Spring Boot and MySQL architecture. I architected a Normalized Relational Model supporting complex One-to-Many relationships to enable granular tracking of multiple service locations per client entity.
@@ -91,7 +96,7 @@ logic and creative problem-solving to deliver high-impact results.
     >> Enforced data siloing by maintaining an Air-Gapped/Local Environment to ensure maximum privacy of PII (Personally Identifiable Information).
 >> Keywords: Full-Stack Engineering, Java, Spring Boot, MySQL, RDBMS Design, Spring Security, System Observability, Audit Logging, Data Privacy, Business Intelligence (BI).
 
-## PROJECT: AI CHAT Bot 
+## PROJECT: AI Chat Bot 
 >> Action: Developed a RAG-based (Retrieval-Augmented Generation) pipeline using Gemini 2.5 Flash to synthesize personal career data into real-time conversational responses.
 >> AI Model: Gemini 2.5 Flash (via Google Generative AI Python SDK)
 >> Backend: Flask (Python) hosted on Render.com (SaaS)
