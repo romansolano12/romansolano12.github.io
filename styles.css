@@ -155,7 +155,11 @@ body {
 
 .tabTitles {
     display: flex;
+    flex-wrap: wrap;
     margin: 20px 0 40px;
+    gap: 10px;
+    justify-content:center;
+    width: 100%;
 }
 
 /* FIX: Added styles to reset the <button> element */
