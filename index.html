@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Roman Gonzalez</title>
   <link rel="icon" type="image/png" href="images/favicon.png?v=2">
-  <link rel="stylesheet" href="styles.css?v=1.4">
+  <link rel="stylesheet" href="styles.css?v=1.5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -468,34 +468,52 @@
     </div>
 </div>
 
-<div id="chat-wrapper" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-    <div id="chat-window" style="display: none; width: 330px; height: 450px; background: #121212; border: 1px solid #00d2ff; border-radius: 15px; flex-direction: column; box-shadow: 0px 0px 20px rgba(0, 210, 255, 0.2); overflow: hidden;">
-        <div style="background: linear-gradient(90deg, #1e1f24 0%, #00d2ff 100%); color: white; padding: 15px; font-weight: bold; font-size: 14px; letter-spacing: 1px; display: flex; justify-content: space-between; align-items: center;">
+<div id="chat-wrapper" style="position: fixed; 
+bottom: 20px; right: 20px; z-index: 1000; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    <div id="chat-window" style="display: none; width: 330px; height: 450px; background: var(--second-bg-color); 
+    border: 1px solid var(--accent-color); border-radius: 15px; flex-direction: 
+    column; box-shadow: 0px 0px 20px var(--second-accent-color); overflow: hidden;">
+        <div style="background: linear-gradient(90deg, var(--second-bg-color)0%, var(--accent-color) 100%); 
+        color: var(--text-main); padding: 15px; font-weight: bold; font-size: 14px; letter-spacing: 1px; 
+        display: flex; justify-content: space-between; align-items: center;">
             <span>ROMAN_AI_v2.5</span>
             <span style="width: 8px; height: 8px; background: #00ff00; border-radius: 50%; box-shadow: 0 0 5px #00ff00;"></span>
         </div>
         
-        <div id="messages" style="flex: 1; overflow-y: auto; padding: 15px; font-size: 13px; color: #e0e0e0; background: #181818; scrollbar-width: thin;">
-            <div style="color: #00d2ff; margin-bottom: 10px; font-style: italic;">// Connection Established...</div>
+        <div id="messages" style="flex: 1; overflow-y: auto; padding: 15px; font-size: 13px; color: var(--text-main); background: var(--bg-color); scrollbar-width: thin;">
+            <div style="color: var(--accent-color); margin-bottom: 10px; font-style: italic;">// Connection Established...</div>
         </div>
         
-        <div style="padding: 15px; background: #1e1f24; border-top: 1px solid #333; display: flex; gap: 8px;">
-            <input type="text" id="chat-input" placeholder="Ask Roman AI" style="flex: 1; background: #121212; border: 1px solid #444; border-radius: 6px; padding: 8px; color: #00d2ff; outline: none; font-size: 13px;">
-            <button id="send-btn" onclick="sendMessage()" style="background: transparent; color: #00d2ff; border: 1px solid #00d2ff; border-radius: 6px; padding: 5px 12px; cursor: pointer; font-weight: bold; transition: 0.3s;" onmouseover="this.style.background='#00d2ff'; this.style.color='#000'" onmouseout="this.style.background='transparent'; this.style.color='#00d2ff'">Send</button>
+        <div style="padding: 15px; background: var(--bg-color); border-top: 1px solid var(--text-muted); display: flex; gap: 8px;">
+            <input type="text" id="chat-input" placeholder="Ask Roman AI" 
+            style="flex: 1; background: var(--second-bg-color); border: 1px solid var(--text-muted); 
+            border-radius: 6px; padding: 8px; color: var(--accent-color); outline: none; font-size: 13px;">
+            <button id="send-btn" onclick="sendMessage()" style="background: transparent; 
+            color: var(--accent-color); border: 1px solid var(--accent-color); border-radius: 6px; 
+            padding: 5px 12px; cursor: pointer; font-weight: bold; transition: 0.3s;" 
+            onmouseover="this.style.background='var(--accent-color)'; this.style.color='#000'" 
+            onmouseout="this.style.background='transparent'; this.style.color='var(--accent-color)'">Send</button>
         </div>
         
-        <div style="font-size: 9px; color: #666; text-align: center; padding: 5px; background: #121212;">
+        <div style="font-size: 9px; color: var(--text-muted); text-align: center; padding: 5px; 
+        background: var(--second-bg-color);">
             NON-PERSISTENT SESSION | VERIFY WITH THE REAL ROMAN
         </div>
     </div>
     
-    <button id="chat-toggle" onclick="toggleChat()" style="width: 70px; height: 70px; border-radius: 50%; background: #1e1f24; color: #00d2ff; font-size: 18px; font-weight: bold; border: 2px solid #00d2ff; cursor: pointer; box-shadow: 0px 0px 15px rgba(0, 210, 255, 0.4); transition: all 0.4s ease; outline: none; margin-top: 15px; float: right;" onmouseover="this.style.boxShadow='0px 0px 25px #00d2ff'; this.style.transform='scale(1.05)'" onmouseout="this.style.boxShadow='0px 0px 15px rgba(0, 210, 255, 0.4)'; this.style.transform='scale(1)'">
+    <button id="chat-toggle" onclick="toggleChat()" style="width: 70px; height: 70px; 
+    border-radius: 50%; background: var(--bg-color); color: var(--accent-color); font-size: 18px; 
+    font-weight: bold; border: 2px solid var(--accent-color); cursor: pointer; 
+    box-shadow: 0px 0px 15px var(--second-accent-color); transition: all 0.4s ease; outline: none; 
+    margin-top: 15px; float: right;" onmouseover="this.style.boxShadow='0px 0px 25px var(--accent-color)'; 
+    this.style.transform='scale(1.05)'" onmouseout="this.style.boxShadow='0px 0px 15px var(--second-accent-color)';
+    this.style.transform='scale(1)'">
         AI
     </button>
 </div>
 
 
-<script src="myScript.js?v=1.2"></script>
+<script src="myScript.js?v=1.3"></script>
 </html>
 
 

@@ -4,6 +4,24 @@
     --accent-color: #00d2ff; /* A cyan pop for "Tech/Data" vibe */
     --text-main: #ffffff;
     --text-muted: #a0a0a0;
+    --second-bg-color: #2a2d36;
+    --transparent-color: rgba(15, 16, 20, 0.8);
+    --second-accent-color: rgba(15, 185, 223, 0.1);
+    --project-card-bg: rgba(30, 31, 36, 0.7);
+}
+
+@media (prefers-color-scheme: light){
+    :root {
+    --bg-color: #f7eee7; 
+    --card-bg: #ffffff;
+    --accent-color: #b46316;
+    --text-main: #000000;
+    --text-muted: #6b6b6b;  
+    --second-bg-color: #ffffff;
+    --transparent-color: rgba(242, 242, 242, 0.8);
+    --second-accent-color: rgba(225, 81, 9, 0.1); 
+    --project-card-bg: rgba(255, 255, 255, 0.7);
+    }
 }
 
 
@@ -26,9 +44,9 @@ header#header {
     z-index: 1000; /* Ensures it stays on top of all other elements */
     
     /* Modern Glass Effect */
-    background: rgba(15, 16, 20, 0.8); /* Matches your --bg-color with transparency */
+    background: var(--transparent-color); /* Matches your --bg-color with transparency */
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--text-main);
 }
 
 .logo {
@@ -41,7 +59,7 @@ header#header {
 }
 
 .logo span {
-    color: var(--accent-color); /* The cyan dot */
+    color: var(--accent-color); 
 }
 
 .nav-container {
@@ -75,7 +93,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6; /* Better readability */
-    background-image: radial-gradient(circle at 50% 0%, #2a2d36 0%, var(--bg-color) 70%); /* Subtle spotlight effect */
+    background-image: radial-gradient(circle at 50% 0%, var(--second-bg-color) 0%, var(--bg-color) 70%); /* Subtle spotlight effect */
 }
 
 #aboutMe {
@@ -108,7 +126,7 @@ body {
     max-width: 400px;
     border-radius: 20px;
     /* Adds a soft glow behind your profile picture */
-    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2); 
+    box-shadow: 0 10px 30px var(--accent-color); 
     transition: transform 0.5s;
     object-fit: cover;
 }
@@ -141,7 +159,7 @@ body {
 .aboutCol2 p {
     font-size: 1.1rem;
     line-height: 1.8; /* More breathing room between lines */
-    color: #d1d1d1;
+    color: var(--text-color);
     margin-bottom: 25px;
     background: transparent; /* No more grey box */
     padding: 0;
@@ -164,7 +182,7 @@ body {
     cursor: pointer;
     position: relative;
     padding: 10px 20px;
-    background-color: rgba(255,255,255,0.05);
+    background-color: var(--second-bg-color);
     color: var(--text-muted); /* Muted by default */
     transition: all 0.3s;
 }
@@ -172,7 +190,7 @@ body {
 .tabLinks.activeLink {
     color: var(--accent-color); /* Active color */
     border-color: var(--accent-color);
-    background-color: rgba(0, 210, 255, 0.1);
+    background-color: var(--second-accent-color); 
 }
 .tabLinks.activeLink::after {
     width: 100%; /* Full underline for active */
@@ -183,7 +201,7 @@ body {
     list-style: none;
     margin: 15px 0;
     padding: 15px;
-    background: rgba(255,255,255,0.03); /* Very subtle card background */
+    background: var(--second-bg-color); /* Very subtle card background */
     border-left: 3px solid var(--accent-color); /* Cyan accent line on left */
     border-radius: 0 10px 10px 0;
 }
@@ -349,9 +367,9 @@ h5 {
 }
 
 .contact-container {
-    background: rgba(30, 31, 36, 0.7);
+    background: var(--second-bg-color);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--bg-color);
     border-radius: 20px;
     padding: 60px;
     display: flex;
@@ -378,7 +396,7 @@ h5 {
 .social-icons a:hover {
     color: var(--accent-color);
     transform: translateY(-8px) scale(1.1);
-    text-shadow: 0 0 15px rgba(0, 210, 255, 0.8), 0 0 30px rgba(0,210,255,0.4);
+    text-shadow: 0 0 15px var(--accent-color), 0 0 30px var(--second-accent-color);
 }
 
 
@@ -387,7 +405,7 @@ h5 {
     display: inline-block;
     padding: 15px 40px;
     background: var(--accent-color);
-    color: black;
+    color: var(--bg-color);
     text-decoration: none;
     border-radius: 30px;
     font-weight: 700;
@@ -397,7 +415,7 @@ h5 {
 
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    box-shadow: 0 0 20px var(--accent-color);
 }
 
 
@@ -452,9 +470,9 @@ h5 {
 
 /* Individual Project Card */
 .project-card {
-    background: rgba(30, 31, 36, 0.7);
+    background: var(--project-card-bg); 
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--second-bg-color);
     border-radius: 15px;
     overflow: hidden; /* Clips the image to the border-radius */
     transition: transform 0.3s ease, border-color 0.3s ease;
@@ -463,7 +481,7 @@ h5 {
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--accent-color);
-    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+    box-shadow: 0 10px 30px var(--second-accent-color);
 }
 
 /* Image Handling */
@@ -504,7 +522,7 @@ h5 {
 /* Skill Tags inside the card */
 .tag {
     display: inline-block;
-    background: rgba(0, 210, 255, 0.1);
+    background: var(--second-accent-color);
     color: var(--accent-color);
     padding: 5px 12px;
     border-radius: 20px;
@@ -535,7 +553,7 @@ h5 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Dark backdrop */
+    background-color: var(--bg-color);
     padding-top: 100px;
 }
 
@@ -555,7 +573,7 @@ h5 {
     position: absolute;
     top: 30px;
     right: 50px;
-    color: #fff;
+    color: var(--text-color);
     font-size: 50px;
     font-weight: bold;
     cursor: pointer;
@@ -653,7 +671,7 @@ h5 {
 .project-header-link {
     height: 180px;
     /* Use a deep dark background instead of bright cyan */
-    background: #0a0a0a; 
+    background: var(--bg-color); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -664,7 +682,7 @@ h5 {
     /* The "Light Blue Highlight" around the box */
     border: 2px solid var(--accent-color); /* Solid cyan outline */
     /* Optional: A subtle inner glow for a high-tech feel */
-    box-shadow: inset 0 0 15px rgba(0, 210, 255, 0.15); 
+    box-shadow: inset 0 0 15px var(--accent-color); 
     
     transition: all 0.3s ease;
 }
@@ -678,23 +696,23 @@ h5 {
     text-transform: uppercase;
     letter-spacing: 2px;
     /* A slight text shadow to make it "pop" against the dark bg */
-    text-shadow: 0 0 8px rgba(0, 210, 255, 0.4);
+    text-shadow: 0 0 8px var(--second-accent-color);
 }
 
 /* Hover Effect */
 .project-header-link:hover {
     /* Make the glow brighter and background slightly lighter on interaction */
-    background: #121212;
-    box-shadow: inset 0 0 30px rgba(0, 210, 255, 0.3), 0 0 10px var(--accent-color);
+    background: var(--bg-color);
+    box-shadow: inset 0 0 30px var(--accent-color), 0 0 10px var(--second-accent-color);
 }
 
 
 .project-detail {
     max-width: 800px;
-    background: #1a1a1a;
+    background: var(--card-bg);
     padding: 40px;
     border: 1px solid var(--accent-color);
-    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+    box-shadow: 0 0 20px var(--second-accent-color);
     overflow-y: auto;
     max-height: 90vh;
 }
@@ -702,7 +720,7 @@ h5 {
 .case-study-body h4 {
     color: var(--accent-color);
     margin-top: 25px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--second-bg-color);
     padding-bottom: 5px;
 }
 
@@ -714,7 +732,7 @@ h5 {
 
 .results-table td {
     padding: 10px;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid var(--second-bg-color);
     color: var(--text-color);
 }
 

@@ -113,9 +113,9 @@ async function sendMessage() {
 
     // 1. Display User Message (Styled for Dark Theme)
     messages.innerHTML += `
-        <div style="margin-bottom: 15px; border-left: 2px solid #00d2ff; padding-left: 10px;">
-            <span style="color: #555; font-size: 10px; font-weight: bold; letter-spacing: 1px;">USER_QUERY ></span>
-            <div style="color: #ffffff; margin-top: 4px;">${question}</div>
+        <div style="margin-bottom: 15px; border-left: 2px solid var(--accent-color); padding-left: 10px;">
+            <span style="color: var(--text-muted); font-size: 10px; font-weight: bold; letter-spacing: 1px;">USER_QUERY ></span>
+            <div style="color: var(--text-main); margin-top: 4px;">${question}</div>
         </div>
     `;
     
@@ -125,9 +125,9 @@ async function sendMessage() {
     // 2. Loading State
     const loadingId = 'loading-' + Date.now();
     messages.innerHTML += `
-        <div id="${loadingId}" style="color: #00d2ff; font-size: 11px; margin-bottom: 15px; animate: pulse 1.5s infinite;">
+        <div id="${loadingId}" style="color: var(--accent-color); font-size: 11px; margin-bottom: 15px; animate: pulse 1.5s infinite;">
             >> ACCESSING_CORE_DATABASE... <br>
-        <span style="font-size: 9px; color: #666;">(Server may take 30s to wake up on first query)</span>
+        <span style="font-size: 9px; color: var(text-muted);">(Server may take 30s to wake up on first query)</span>
         </div>
     `;
 
@@ -152,8 +152,8 @@ async function sendMessage() {
         // 3. Display AI Response (Styled as Terminal Output)
         messages.innerHTML += `
             <div style="margin-bottom: 20px;">
-                <span style="color: #00d2ff; font-size: 10px; font-weight: bold; letter-spacing: 1px;">ROMAN_AI_OUTPUT ></span>
-                <div style="color: #e0e0e0; margin-top: 4px; line-height: 1.5; white-space: pre-wrap;">${data.response}</div>
+                <span style="color: var(accent-color); font-size: 10px; font-weight: bold; letter-spacing: 1px;">ROMAN_AI_OUTPUT ></span>
+                <div style="color: var(--text-main); margin-top: 4px; line-height: 1.5; white-space: pre-wrap;">${data.response}</div>
             </div>
         `;
     } catch (error) {
